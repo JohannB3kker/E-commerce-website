@@ -1,0 +1,1800 @@
+ 
+ /* Basic layout of website*/
+
+ *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box; 
+} 
+
+title{
+    text-transform: uppercase;
+}
+
+.page{
+  position: relative;
+    min-height: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    height: 100%;
+    width: 100%;
+ }
+
+ html {
+  height: 100%;
+}
+
+body{
+    background:white;
+    color: white;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+    display: flex;
+    flex-direction:column; 
+    margin:0px;
+}
+
+section{
+  background:white;
+  display: flex;
+  padding: 20px;
+}
+
+footer{
+  background: black;
+  position: relative;
+  color:white;
+  font-size: 12px;
+  height: auto;
+  width: 100%;
+  text-align: center; 
+  padding-top: 20px;
+  padding-bottom: 20px;
+  bottom: 0;
+  left: 0px;
+  right: 0px;
+  margin-bottom: 0px;
+}
+
+
+/* social media share buttons on footer */
+
+#socialDiv{
+  width:100%
+}
+
+#socialDivInner a{
+  color: white;
+  padding:10px;
+  font-size: 25px;
+  border-radius: 50%;
+}
+
+#socialDivInner{
+  display: table;
+  margin: 0 auto;
+  border: 1px solid black;
+}
+
+
+
+/*//////////////////////////////////////////////*/
+/* Navigation menu */
+
+/* navigation bar (top of page) */
+.fixedNav{
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    min-height: 170px;
+    background-color:white;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 800;
+    width: 100%;
+    box-shadow: 0px 18px 20px 2px rgba(0, 0, 0, 0.14);
+}
+
+/* colour of current page's link */
+.navLinks li a.currentHighlight{
+  color: tomato;
+  border-top: solid black;  
+}
+
+.navLinks li a{
+    color: black;
+}
+
+.navLinks li a:hover{
+    border-top: 3px solid tomato
+}
+
+
+.navLinks{
+    display: flex;
+    justify-content: space-around;
+    width: 55%;
+    font-weight: bold;
+    font-size: 15px;
+    text-decoration: none;
+    list-style: none;
+    text-align: right;
+    text-transform: uppercase;
+    align-items: center;
+    letter-spacing: 1px;
+    position: fixed;
+    right: 15px;
+    top: 90px;
+}
+
+.navLinks a.login {
+    background: white;
+    color: black;
+    font-size: 25px;
+  }
+
+  /* cart icon */
+  .navLinks a.cart {
+    background: white;
+    color: black;
+    font-size: 25px;
+  }
+
+  .navLinks a.login:hover {
+    border-top: 3px solid tomato
+  }
+
+  .navLinks a.cart:hover {
+    border-top: 3px solid tomato
+  }
+
+/* website logo (in navigation bar) */
+.company figure img{
+    box-shadow:none;
+    text-align: left;
+    position: fixed;
+    left: 100px;
+    top: 0%;
+    width:120px;
+    height:90px;
+    align-items: center;
+}
+
+/* website name in navigation menu */
+.company h1 a{
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: left;
+    text-transform: uppercase;
+    align-items: center;
+    letter-spacing: 1px;
+    position: fixed;
+    left: 20px;
+    top: 90px;
+}
+
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+}
+
+a:active{
+    text-decoration: none;
+}
+
+
+
+/* Drop-down navigation menu (mobile screens) */
+
+
+/* Hides all links within the drop-down menu*/
+.topnav #myLinks {
+    display: none;
+  }
+
+#myLinks{
+    width: 50%;
+  margin: 0 auto;
+  margin-top:200px;
+  }
+
+.topnav{
+    text-align: center;
+    width: 100%;
+  }
+
+
+/* Links within the drop-down menu*/
+.topnav a {
+    color: black;
+    padding: 14px 11px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    display:block;
+    position:initial;
+    text-align: center;
+  }
+
+.topnav a.loginD{
+    font-size: 25px;
+  }
+
+.topnav .dropNavLogoutClass{
+    font-size: 32px;
+  }
+  
+.topnav a.cartD{
+    font-size: 25px;
+  }
+
+
+  /* drop-down menu icon */
+  .topnav a.icon {
+    background: white;
+    right: 20px;
+    top: 10px;
+    font-size: 40px;
+    position: fixed;
+    color: black;
+  }
+
+  /* logout button */
+  .navLogoutClass button{
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding:6px;
+    border:none;
+  }
+
+  .navLogoutClass button:hover{
+    background-color: rgb(59, 58, 58);
+    cursor: pointer;
+  }
+
+  /* changes background of drop-down menu and links on mouse hover */
+  .topnav a:hover {
+    color: tomato;
+  }
+
+  .topnav a.currentHighlight {
+    color: tomato;
+  }
+
+
+ 
+
+
+
+/*//////////////////////////////////////////////*/
+/* Home page */
+
+/* top section of home page */
+.top{
+   position: relative;
+    background-position: center;
+    background-size: 100%;
+    background-color: lightgray;
+    color:white;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    top: 5%;
+    padding: 300px;
+}
+
+/* the heading on the home page */
+.productsHeading{
+  position:absolute;
+  text-transform: uppercase;
+  top: 90px;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  font-size: 25px;
+  letter-spacing: 1px;
+}
+
+/* the fading and transition images on the home page */
+.fader img{
+    position:absolute;
+    left:-0%;
+    top:-5%;
+    width:100%;
+    height :110%;
+    object-fit: cover;
+    -webkit-animation-name: fade;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 12s;
+    animation-name: fade;
+    animation-iteration-count: infinite;
+    animation-duration: 12s;
+}
+
+@-webkit-keyframes fade {
+    0% {opacity: 0;}
+    20% {opacity: 1;}
+    33% {opacity: 1;}
+    53% {opacity: 0;}
+    100% {opacity: 0;}
+}
+
+@keyframes fade {
+    0% {opacity: 0;}
+    20% {opacity: 1;}
+    33% {opacity: 1;}
+    53% {opacity: 0;}
+    100% {opacity: 0;}
+}
+
+/* transition image 1 */
+#f1 {
+    -webkit-animation-delay: -12s;
+    background-color: gray;
+}
+
+/* transition image 2 */
+#f2 {
+    -webkit-animation-delay: -8s;
+    background-color: gray;
+}
+
+/* transition image 3 */
+#f3 {
+    -webkit-animation-delay: -4s;
+    background-color: gray;
+}
+
+.mainHeading{
+  width: 100%;
+  height: 120px;
+  background-color: tomato;
+  margin-top: 30px;
+}
+
+#welcomeHeading{
+  padding-top: 20px;
+  font-size: 70px;
+
+}
+
+/* bottom section of home page */
+.bottom{
+    position:relative;
+    background:white;
+    color:black;
+    padding-top: 120px;
+    padding-bottom: 10%;
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-around;
+
+}
+
+/* popular products images on home page */
+.bottom figure{
+  margin: auto;
+  position: relative;
+  padding-top: 20px;
+  width: 100%;
+  height: 100%;
+  max-width: 480px;
+  max-height: 480px;
+}
+
+/* popular products images on home page */
+.bottom figure img{
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  box-shadow: black 0 0 20px;
+}
+
+/* shop on home page */
+.goToShop a{
+  position: absolute;
+  transform: translate(-50%,-50%);
+  margin-right: -50%;
+  top: 50%;
+  left: 50%;
+  right: 50%;
+  bottom: 50%;
+  font-size: 40px;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.goToShop{
+  width: auto;
+  height: auto;
+}
+
+.goToShop a{
+  text-decoration: none;
+}
+.goToShop a:hover{
+  text-decoration: none;
+}
+
+.goToShop a:active{
+  text-decoration: none;
+}
+
+
+.bottom [type=button]:hover{
+  background-color: black;
+  cursor: pointer;
+}
+
+.bottom figcaption{
+  font-weight: bold;
+  font-size: 20px;
+}
+
+
+
+
+/*//////////////////////////////////////////////*/
+/* Orders page */
+
+.orderBody {
+  width: 100%;
+}
+
+/* admin's orders table */
+.adminOrdersT{
+  top:258px;
+  padding-bottom: 215px;
+}
+
+/* customer order history table*/
+.displayTable{
+  padding-bottom: 300px;
+}
+  
+/* tables and cells */
+th { 
+  background: black; 
+  color: white; 
+  font-weight: bold; 
+}
+
+td, th { 
+  padding: 6px; 
+  border: 1px solid #ccc; 
+  text-align: center; 
+}
+
+td{
+  color: black;
+}
+
+/* delivery in progess button used by administrator */
+#inProgressButton{
+  background-color: #94b1ee;
+  color: white;
+  letter-spacing: 1px;
+  font-weight: bold;
+  border: none;
+  padding: 10px;
+}
+
+#inProgressButton:hover{
+  background-color: #376ad8;
+  cursor: pointer;
+}
+
+/* cancel order button used by administrator */
+#cancelOrderButton{
+  background-color: rgb(126, 126, 126);
+  color: white;
+  letter-spacing: 1px;
+  font-weight: bold;
+  border: none;
+  padding: 10px;
+}
+
+#cancelOrderButton:hover{
+  background-color: rgb(90, 89, 89);
+  cursor: pointer;
+}
+
+/* success button used by administrator */
+#successButton{
+  background-color: rgb(129, 206, 129);
+  color: white;
+  letter-spacing: 1px;
+  font-weight: bold;
+  border: none;
+  padding: 10px;
+}
+
+#successButton:hover{
+  cursor: pointer;
+  background-color: rgb(43, 161, 43);
+}
+
+
+
+
+
+/*//////////////////////////////////////////////*/
+
+/* About Us page */
+
+
+.Heading{
+  color: black;
+  font-size: 30px;
+  font-weight: normal;
+  padding-bottom: 30px;
+  z-index: 1;
+  margin-top: 258px;
+}
+
+.aboutWorks{
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 30px;
+  padding-bottom: 9px;
+}
+
+.aboutSteps{
+  color: black;
+  font-size: 18px;
+  margin-top: 10px;
+  margin-left: 30px;
+  display:inline-block;
+  text-align: justify;
+  position:relative;
+  
+}
+
+.aboutText{
+  background: tomato;
+  color: black;
+  display:inline-block;
+  text-align: justify;
+  position:relative;
+  font-size: 18px;
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 40px;
+  width: 800px;
+}
+
+.aboutPrice{
+  background: white;
+  color: black;
+  text-align: justify;
+  position: relative;
+  font-size: 15px;
+  top:60px;
+  padding-top: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 20px;
+  margin: 0 auto;
+  width: 800px;
+  background-color: tomato;
+}
+
+
+
+
+
+
+
+
+/*//////////////////////////////////////////////*/
+/* Contact Us page */
+
+/* the contact us form */
+.contactSection form{
+  color: black;
+  text-align: center;  
+  background-color: #FFFFFF;
+  width: 400px;
+  height: 1000px;
+  margin: 258px auto;
+  border-radius: 1.5em;
+  display:block;
+}
+
+.contactForm-body {
+  margin: 5px auto;
+}
+
+/* the contact us page's heading */
+.contactForm-heading h1{
+  padding-top: 50px;
+  padding-bottom: 30px;
+  letter-spacing: 1px;
+  text-align: center;
+  font-size: 20px;
+}
+
+/* text field labels */
+.contactForm-body label{
+    font-size: 16px;
+    color: black;
+    display: flex;
+    margin-left: 65px;
+    padding-top: 40px;
+    font-weight: bold;
+}
+
+/* text fields */
+.contactForm-body input{
+  width: 270px;
+  height: 20px;
+  border: none;
+  border-bottom: 2px solid black;
+  padding-left: 13px; 
+}
+
+/* submit message button */
+.contactForm-body button{
+  margin-top: 40px;
+  width: 100px;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+.contactForm-body [type=submit] {
+  background-color: tomato;
+  height: 60px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 30px;
+}
+
+.contactForm-body [type=submit]:hover{
+  background-color: black;
+  cursor: pointer;
+}
+
+.contactForm-body textarea{
+  width: 270px;
+  min-height: 200px; 
+  margin: 8px 0;
+  border: 2px solid black;
+  padding-left: 13px;
+  padding-right: 13px;
+}
+
+.contactSection{
+  background-color: tomato;
+}
+
+
+
+
+
+
+/*//////////////////////////////////////////////*/
+/* Login page */
+
+.loginSection{
+  background-color: tomato;
+  padding-bottom: 148px;
+  min-height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+/* email text field */
+.loginClass input[type="text"]{
+  display: block;
+  margin: 0 auto;
+  font-size: 16px;
+}
+
+/* password text field */
+.loginClass input[type="password"]{
+  display: block;
+    margin: 30px auto;
+    font-size: 16px;
+}
+
+/* register page link */
+.loginClass a, .form-body a{
+  display: block;
+  font-size: 16px;
+  color: gray;
+  margin: 50px auto;
+}
+
+/* footer used on the login page */
+#loginFooter{
+  background: black;
+  position: fixed;
+  color:white;
+  font-size: 12px;
+  height: auto;
+  width: 100%;
+  text-align: center; 
+  padding-top: 20px;
+  padding-bottom: 20px;
+  bottom: 0;
+  left: 0px;
+  right: 0px;
+  margin-bottom: 0px;
+}
+
+.loginClass{
+  color: black;
+  text-align: center;  
+  background-color: #FFFFFF;
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  margin-top:300px;
+  border-radius: 1.5em;
+  display:block;
+}      
+
+/* login page's heading */
+.loginClass h1{
+    padding-top: 50px;
+    padding-bottom: 30px;
+    letter-spacing: 1px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.loginClass input, select{
+     width: 270px;
+     height: 20px;
+     margin: 8px 0; 
+ }
+
+.loginClass input {
+    border: none;
+    height: 30px;
+    border-bottom: 2px solid black;
+    padding-left: 13px;              
+  }
+
+/* login button */
+.loginClass [type=button] {
+    background-color: tomato;
+    height: 60px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 30px;
+}
+
+.loginClass [type=button]:hover{
+    background-color: black;
+    cursor: pointer;
+}
+
+.loginClass button{
+    width: 100px;
+    margin: 40px 0;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    margin: 0 auto;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+
+
+
+
+
+
+/*//////////////////////////////////////////////*/
+/* Register page*/
+
+.registerSection{
+  background-color: tomato;
+}
+
+.registerSection form{
+  color: black;
+  text-align: center;  
+  background-color: #FFFFFF;
+  width: 400px;
+  height: 1000px;
+  margin: 258px auto;
+  border-radius: 1.5em;
+  box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+  display:block;
+}
+
+.form-body {
+  margin: 5px auto;
+}
+
+/* heading of register page */
+.form-heading h1{
+  padding-top: 50px;
+  padding-bottom: 30px;
+  letter-spacing: 1px;
+  text-align: center;
+  font-size: 20px;
+}
+
+/* text fields' labels */
+.form-body label{
+  font-size: 16px;
+  color: black;
+  display: flex;
+  margin-left: 65px;
+  padding-top: 40px;
+   font-weight: bold;
+}
+
+/* textfields on register page */
+.form-body input{
+  width: 270px;
+  height: 20px;
+  border: none;
+  border-bottom: 2px solid black;
+  padding-left: 13px; 
+}
+
+/* register button */
+.form-body button {
+  background-color: tomato;
+  height: 60px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 30px;
+  margin-top: 40px;
+  width: 140px;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+.form-body button:hover{
+  background-color: black;
+  cursor: pointer;
+}
+
+
+
+
+
+
+/*//////////////////////////////////////////////*/
+/* Shop page*/
+
+/* section used to display products to customers */
+.shopBottom{
+    background:white;
+    color:black;
+    padding-bottom: 2%;
+    display: flex; 
+    height: 90%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative; 
+    overflow-y: visible;
+}
+
+
+/* customer shop heading */
+.customerShopHeading{
+  color: black;
+  font-size: 35px;
+  font-weight: normal;
+  padding-bottom: 30px;
+  z-index: 1;
+  margin-top: 235px;
+  letter-spacing: 3px;
+}
+
+.shopBottom figure{
+margin: auto;
+ width: 300px;
+ height: 200px;
+ padding-bottom: 20px;
+ margin-bottom: 150px;
+}
+
+/* product images in shop */
+.shopBottom figure img{
+  width: 250px;
+  height: 250px;
+  padding: 10px; 
+}
+
+/* prices of products */
+.price{
+    font-weight: bold;
+}
+
+/* add to cart button on shop page */
+.shopBottom button[type=submit], .shopBottom button[type=button] {
+    background-color: tomato;
+    border: none;
+    color: white;
+    height: auto;
+    width: auto;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    padding:10px;
+    border-radius:18%;
+}
+
+.shopBottom button[type=submit]:hover, .shopBottom button[type=button]:hover{
+    background-color: black;
+    cursor: pointer;
+}
+
+
+
+#shopFooter{
+  background: black;
+  position: relative;
+  color:white;
+  font-size: 12px;
+  height: auto;
+  width: 100%;
+  text-align: center; 
+  padding-top: 20px;
+  padding-bottom: 20px;
+  bottom: 0;
+  left: 0px;
+  right: 0px;
+  margin-bottom: 0;
+}
+
+
+
+/* admin's section on shop page */
+
+
+/* upload image function styling */
+.uploader{
+  width: 270px;
+  height: 20px;
+  color: black; 
+}
+
+/*upload button styling*/
+.uploader[type="file"]{
+  height: 30px;
+  border-bottom: none;
+  padding-left: 13px; 
+  display: block;
+  margin: 0 auto;
+  font-size: 15px; 
+ }
+
+#imageToUpload[type="file"]:hover{
+ cursor: pointer;
+}
+
+/* edit product button */
+.editButton{
+  background-color: #94b1ee;
+  color: white;
+  letter-spacing: 1px;
+  font-weight: bold;
+  border: none;
+  padding: 10px;
+}
+
+.editButton:hover{
+  background-color: #376ad8;
+  cursor: pointer;
+}
+
+/* remove product button */
+.removeButton{
+  background-color: rgb(126, 126, 126);
+  color: white;
+  letter-spacing: 1px;
+  font-weight: bold;
+  border: none;
+  margin-top: 6px;
+  padding: 10px;
+}
+
+.removeButton:hover{
+  background-color: rgb(90, 89, 89);
+  cursor: pointer;
+}
+
+/* add new product button */
+#addProductButton{
+  border: none;
+  background-color: rgb(129, 206, 129);
+  color: white;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+  font-weight: bold;
+  border: none;
+  padding: 20px;
+
+}
+
+#addProductButton:hover{
+  cursor: pointer;
+  background-color: rgb(43, 161, 43);
+}
+  
+/* add product overlay */
+/* appears when add product button is pressed */
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 801;
+  cursor: pointer;
+}
+
+#addContents{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  color: white;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
+
+/* close overlay button */
+#closeOverlay{
+  position: relative;
+  top: 5%;
+  font-size: 50px;
+  color: white;
+  font-size: large;
+}
+
+.addProductFormLayout{
+  color: black;
+  text-align: center;  
+  background-color: #FFFFFF;
+  width: 400px;
+  height: 450px;
+  margin: 0 auto;
+  border-radius: 1.5em;
+  box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%) 
+}
+
+.addProductForm-heading h1{
+  padding-top: 50px;
+  padding-bottom: 30px;
+  letter-spacing: 1px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.addProductForm-body {
+  margin: 5px auto;
+  margin-top: -50px;
+}
+
+.addProductForm-body label{
+    font-size: 16px;
+    color: black;
+    display: flex;
+    margin-left: 65px;
+    padding-top: 40px;
+    font-weight: bold;
+}
+
+.addProductForm-body input{
+  width: 270px;
+  height: 20px;
+  border: none;
+  border-bottom: 2px solid black;
+  padding-left: 13px; 
+}
+
+
+/* save product button on overlay */
+.addProductForm-body button{
+  margin-top: 20px;
+  width: 100px;
+  font-size: 16px;
+}
+
+.addProductForm-body [type=button] {
+  background-color: tomato;
+  height: 60px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 30px;
+  letter-spacing: 2px;
+}
+
+.addProductForm-body [type=button]:hover{
+  background-color: black;
+  cursor: pointer;
+}
+
+
+
+/* Admin edit section on shop page */
+
+/* overlay used to edit products */
+/* appears when the edit button is pressed */
+#editOverlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 801;
+  cursor: pointer;
+}
+
+.editFormLayout{
+  color: black;
+  text-align: center;  
+  background-color: #FFFFFF;
+  width: 400px;
+  height: 450px;
+  margin: 0 auto;
+  border-radius: 1.5em;
+  box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.editFormHeading h1{
+  padding-top: 50px;
+  padding-bottom: 30px;
+  letter-spacing: 1px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.editFormBody {
+  margin: 5px auto;
+  margin-top: -50px;
+}
+
+
+/* text fields' labels on edit overlay */
+.editFormBody label{
+  font-size: 16px;
+  color: black;
+  display: flex;
+  margin-left: 65px;
+  padding-top: 40px;
+  font-weight: bold;
+}
+
+.editFormBody input{
+  width: 270px;
+  height: 20px;
+  border: none;
+  border-bottom: 2px solid black;
+  padding-left: 13px; 
+}
+
+/* save changes button on edit overlay*/
+.editFormBody button{
+  margin-top: 20px;
+  width: 100px;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+.editFormBody [type=button] {
+  background-color: tomato;
+  height: 60px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 30px;
+}
+
+.editFormBody[type=button]:hover{
+  background-color: black;
+  cursor: pointer;
+}
+
+/* used to close edit overlay */
+#closeEditOverlay{
+  position: relative;
+  top: 5%;
+  font-size: 50px;
+  color: white;
+  font-size: large;
+}
+
+.saver{
+  background-color: tomato;
+  height: 50px;
+  position: relative;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 30px;
+}
+
+.saver:hover{
+  background-color: black;
+  cursor: pointer;
+}
+
+#addProductButton{
+    letter-spacing: 1px;
+    left:300px;
+ 
+}
+
+/* table used to display products to administrator */
+.adminShopT{
+  top:800px;
+  padding-bottom: 70px;
+  margin: 0 auto;
+}
+
+.product{
+  border: 1px solid #eaeaec;
+  margin: -1px 19px 3px -1px;
+  padding: 10px;
+  text-align: center;
+  background-color: #efefef;
+}
+
+.adminShopT th, tr, td{
+  text-align: center;
+  padding: 10px;
+}
+
+/* admin's shop footer */
+#adminShopFooter{
+  background: black;
+  position: fixed;
+  color:white;
+  font-size: 12px;
+  height: auto;
+  width: 100%;
+  text-align: center; 
+  padding-top: 20px;
+  padding-bottom: 20px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin-bottom: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*//////////////////////////////////////////////*/
+/* Cart page */
+
+.shopping-cart {
+    width: 850px;
+    height:auto;
+    margin: 100px auto;
+    background: white;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cartTitle {
+    height: 60px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid black;
+    color: black;
+    font-size: 30px;
+    font-weight: normal;
+  }
+
+  /* images of products in cart */
+  #images{
+    height: 200px;
+    width: 300px;
+  }
+
+  .cartButtons{
+    width:100%
+  }
+
+  /* checkout button in cart */
+  .checkoutBtn button{
+    color: white;
+    font-weight: bold;
+    border: none;
+    background-color: rgb(13, 128, 13);
+    padding: 20px;
+    width: 270px;
+    margin: 0 auto;
+    margin-top:100px;
+    letter-spacing: 1px;
+  }
+
+  .checkoutBtn button:hover{
+    background-color: rgb(25, 155, 25);
+  }
+
+  .checkoutBtn{
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+
+  #cartSection{
+    padding-bottom:145px;
+    background-color: white;
+  }
+
+  .totalPrice{
+    color: black;
+    position: relative;
+    left: 75px;
+    top: -110px;
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  .totalItems{
+    color: rgb(80, 78, 78);
+    position: relative;
+    font-weight: bold;
+    right: 90px;
+    top: -142px;
+  }
+  
+  /* update cart item button */
+  .cartThing .updateItemButton{
+    position:relative;
+    background-color: #2843e0;
+    left:30px;
+  }
+
+.cartThing .updateItemButton:hover{
+    background-color: rgb(78, 110, 255);
+  }
+  
+  /* remove item from cart button */
+.cartThing .trashBtn {
+    position:relative;
+    right:30px;
+  }
+
+.trashBtn:hover {
+      background-color: rgb(243, 129, 129);
+  }
+
+  #cancelOrderButton{
+    margin-top: 6px;
+  }
+
+  .item {
+    padding: 20px 0;
+    height: 250px;
+    display: flex;
+    box-shadow: 0px 0.5px 10px 2px rgba(0, 0, 0, 0.14);
+  }
+   
+  .buttons {
+    position: relative;
+    padding-top: 30px;
+    margin-right: 60px;
+  }
+
+  .image {
+    margin-right: 50px;
+  }
+   
+  /* description of item in cart */
+ .descriptionCart {
+  margin-top: 20px;
+  left:-50px;
+  width: 150px;
+  position: relative;  
+  }
+   
+  .descriptionCart span {
+    width: 150px;
+    font-size: 14px;
+    color: black;
+    font-weight: bold;
+  }
+   
+/* quantity of item in cart */
+.quantity {
+    margin-top: 20px;
+   left:40px;
+   position: relative;
+   color: rgb(80, 78, 78);
+   font-weight: bold;
+  }
+
+  .quantity input {
+    -webkit-appearance: none;
+    text-align: left;
+    border: none;
+    border-bottom: 2px solid #86939E;
+    width: 32px;
+    font-size: 16px;
+    color: #43484D;
+    font-weight: 300;
+  }
+
+  button:focus,
+  input:focus {
+    outline:0;
+  }
+
+  .total-price {
+    margin-top: 20px;
+    width: 100px;
+    position: relative;
+    left:20px;
+    font-size: 18px;
+    color: black;
+    font-weight: bold;
+  }
+
+  .item button {
+    color: white;
+    font-weight: bold;
+    border: none;
+    background-color: rgb(238, 78, 78);
+    align-items: center;
+    margin-top: 90px;
+    letter-spacing: 1px;
+    height: 30px;
+    border-radius: 30px;
+    width: 160px;
+  }
+
+
+
+
+
+
+
+/*//////////////////////////////////////////////*/
+/* Checkout page */
+
+#backToCartButton{
+  background-color: tomato;
+  color: white;
+  letter-spacing: 1px;
+  font-weight: bold;
+  border: none;
+  padding: 20px;
+  font-size: 15px;
+}
+
+#backToCartButton:hover{
+  background-color:rgb(49, 49, 49);
+  cursor: pointer;
+}
+
+/* confirm order button */
+#confirmButton{
+  background-color: rgb(25, 155, 25);
+  color: white;
+  letter-spacing: 1px;
+  font-weight: bold;
+  border: none;
+  padding: 20px;
+  font-size: 15px;
+}
+
+#confirmButton:hover{
+  cursor: pointer;
+  background-color: rgb(47, 206, 47);
+}
+
+/* checkout page's table containing products */
+.checkoutTable{
+  top:258px;
+  padding-bottom: 338px;
+}
+
+
+
+
+
+
+
+
+
+/*//////////////////////////////////////////////*/
+/* Screen media queries */
+
+
+    
+/* if the screen's width goes below 800 pixels */
+@media (max-width: 800px) {
+  .shopping-cart {
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+    }
+
+    .item {
+      height: auto;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .image img {
+      width: 50%;
+    }
+
+    .image,
+    .quantity,
+    .descriptionCart {
+      width: 100%;
+      text-align: center;
+      margin: 12px 0;
+    }
+
+    .descriptionCart {
+      margin-left: 18%;
+    }
+
+    .total-price{
+      margin-right: 8%;
+    }
+
+    .quantity{
+      margin-right: 16%;
+    }
+
+    .buttons {
+      margin-right: 20px;
+    }
+  }
+
+
+/* if the screen's width goes below 880 pixels */
+/* change the width of the links on the navigation menu */
+@media screen and (max-width:880px){
+    .navLinks{
+      width: 70%;
+      top:130px;
+    } 
+}
+
+
+/* if the screen's width goes bigger than 768 */
+/* the mobile display changes to desktop */
+@media screen and (min-width:768px){
+  .topnav {
+        display: none;
+      }
+}
+
+
+/* the mobile screen is applied when the screen's width goes smaller than 768 pixels */
+/* while the screen is still wider than 375 pixels */
+@media screen and (min-width: 375px) and (max-width: 768px){
+
+
+
+/* shop on home page */
+.goToShop a{
+  top: 47%;
+}
+
+
+  /* items in cart */
+  .total-price {
+    margin-top: 20px;
+    left:10px;
+  }
+
+
+/* quantity of item in cart */
+ .quantity {
+   margin-top: 20px;
+   left:30px;
+  }
+
+.quantity input {
+  text-align: left;
+}
+  
+.item button {
+  align-items: center;
+  margin-top: 90px;
+  height: 30px;
+  width: 130px;
+}
+
+  /* shop on home page */
+  .goToShop a{
+      font-size: 32px;
+  }
+
+    /* popular products images on home page */
+  .bottom figure img{
+      width: 400px;
+      height: 400px;
+  }
+    
+  /* changes the layout/display of tables */
+
+	table, thead, tbody, th, td, tr { 
+    display: block; 
+  }
+
+  table{
+    padding-bottom: 60px;
+  }
+  
+  thead #add{
+    display: block;
+  }
+
+	/* hides the table headers */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+  
+  
+	tr { border: 1px solid #ccc; }
+	
+	td { 
+		/* displays the table data as rows */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+	
+	td:before { 
+		/* row labels */
+		position: absolute;
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+	
+	/* new headings for customer order history table */
+	.displayTable td:nth-of-type(1):before { content: "Order ID"; font-weight: bold;}
+	.displayTable td:nth-of-type(2):before { content: "Order Total"; font-weight: bold;}
+	.displayTable td:nth-of-type(3):before { content: "Time Ordered"; font-weight: bold;}
+	.displayTable td:nth-of-type(4):before { content: "Status"; font-weight: bold;}
+  
+  /* new headings for admin/manger orders table */
+  .adminOrdersT td:nth-of-type(1):before { content: "Order ID"; font-weight: bold;}
+  .adminOrdersT td:nth-of-type(2):before { content: "Customer ID"; font-weight: bold;}
+  .adminOrdersT td:nth-of-type(3):before { content: "Amount Due";font-weight: bold;}
+  .adminOrdersT td:nth-of-type(4):before { content: "Time Added"; font-weight: bold;}
+  .adminOrdersT td:nth-of-type(5):before { content: "Status"; font-weight: bold;}
+  .adminOrdersT td:nth-of-type(6):before { content: "Modify Status"; font-weight: bold;}
+
+  /* new headings for admin/manger shop table */
+  .adminShopT td:nth-of-type(1):before { content: "Product Description"; font-weight: bold;}
+  .adminShopT td:nth-of-type(2):before { content: "Product Image"; font-weight: bold;}
+  .adminShopT td:nth-of-type(3):before { content: "Current Price"; font-weight: bold;}
+  .adminShopT td:nth-of-type(4):before { content: "Date Added"; font-weight: bold;}
+  .adminShopT td:nth-of-type(5):before { content: "Date Edited"; font-weight: bold;}
+  .adminShopT td:nth-of-type(6):before { content: "Modify"; font-weight: bold;}
+
+   /* new headings for customer checkout table */
+  .checkoutTable td:nth-of-type(1):before { content: "Product Name"; font-weight: bold;}
+  .checkoutTable td:nth-of-type(2):before { content: "Quantity"; font-weight: bold;}
+  .checkoutTable td:nth-of-type(3):before { content: "Price Details"; font-weight: bold;}
+  .checkoutTable td:nth-of-type(4):before { content: "Total Price"; font-weight: bold;}
+  
+  
+  .shopBottom{
+      height:fit-content;
+    }
+  
+  .navLinks{
+      display: none;
+    }
+    
+  .projectsHeading{
+      text-align: center;
+    }
+
+  .aboutText{
+      text-align: center;
+      width: auto;
+    }
+
+  .aboutPrice{
+      text-align: center;
+      width: auto;
+    }
+
+  .bottom{
+      height:fit-content;
+    }
+
+  .shopBottom {
+      padding-bottom: 60px;
+    }
+
+  .top{
+      text-align: center;
+    }
+}
+
+/* if the screen goes below 550 pixels */
+@media screen and (max-width: 550px){
+
+  /* change layout of product images */
+
+    .shopBottom figure{
+        margin:auto;
+        margin-bottom: 100px;
+    }
+
+    .shopBottom {
+        padding-bottom: 60px;
+    }
+}
+
+/* if the screen goes below 789 pixels */
+@media screen and (max-width: 789px){
+
+  /* change layout of product images */
+  
+    .shopBottom figure{
+        margin-bottom: 100px;
+    }
+
+    .shopBottom {
+        padding-bottom: 60px;
+    }
+}
+
+
+/*//////////////////////////////////////////////*/
+
+
